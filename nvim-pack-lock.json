@@ -17,6 +17,10 @@
       "rev": "97376e364f51f1b5ae3efaa3eb2e929430ca8419",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
     },
+    "gruvbox.nvim": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
     "mason.nvim": {
       "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
       "src": "https://github.com/mason-org/mason.nvim"

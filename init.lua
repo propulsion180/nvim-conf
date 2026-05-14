@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'habamax'
+--vim.cmd.colorscheme 'habamax'
 
 local function set_transparent() -- set UI component to transparent
   local groups = {
@@ -414,6 +414,7 @@ vim.pack.add {
     version = vim.version.range '1.*',
   },
   'https://github.com/L3MON4D3/LuaSnip',
+  'https://github.com/ellisonleao/gruvbox.nvim',
 }
 
 local function packadd(name)
@@ -430,6 +431,9 @@ packadd 'blink.cmp'
 packadd 'LuaSnip'
 
 -- plugin conf
+
+require('gruvbox').setup()
+vim.cmd.colorscheme 'gruvbox'
 
 require('nvim-tree').setup {
   view = {
@@ -868,4 +872,3 @@ vim.keymap.set('t', '<Esc>', function()
     terminal_state.is_open = false
   end
 end, { noremap = true, silent = true, desc = 'Close floating terminal' })
-
