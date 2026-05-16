@@ -318,6 +318,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     '*.bash',
     '*.zsh',
     '*.c',
+    '*.cs',
     '*.cpp',
     '*.h',
     '*.hpp',
@@ -707,6 +708,7 @@ vim.lsp.config('bashls', {})
 vim.lsp.config('ts_ls', {})
 vim.lsp.config('gopls', {})
 vim.lsp.config('clangd', {})
+vim.lsp.config('csharp-ls', {})
 
 do
   local luacheck = require 'efmls-configs.linters.luacheck'
@@ -733,6 +735,7 @@ do
     filetypes = {
       'c',
       'cpp',
+      'cs',
       'css',
       'go',
       'html',
@@ -755,6 +758,7 @@ do
         c = { clangfmt, cpplint },
         go = { gofumpt, go_revive },
         cpp = { clangfmt, cpplint },
+        cs = { clangfmt },
         css = { prettier_d },
         html = { prettier_d },
         javascript = { eslint_d, prettier_d },
@@ -781,6 +785,7 @@ vim.lsp.enable {
   'ts_ls',
   'gopls',
   'clangd',
+  'csharp_ls',
   'efm',
 }
 
